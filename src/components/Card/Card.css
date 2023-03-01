@@ -58,6 +58,7 @@ span {
 }
 
 #neutral {
+    padding-top: 2.5vh;
     color: yellow;
 }
 
@@ -70,4 +71,16 @@ span {
 
 #event-card-engagements-bookmark {
     color: palevioletred;
+    font-size: 1.5rem;
+    padding-top: 2vh;
+}
+
+#registration-button > button {
+    font-size: 1vw;
+    margin: 2vh;
+    width: 7.5vw;
+    height: 3vh;
+    border-radius: 10px;
+    border: 1px solid white;
+    text-align: center;
 }

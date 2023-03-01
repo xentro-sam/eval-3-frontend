@@ -51,9 +51,12 @@ export default function Card(cardInfo) {
       <div id='event-card-engagements'>
         <div id='event-card-engagements-register'>
           {cardInfo.areSeatsAvailable ? (
-            <div id={isRegistered ? 'success' : 'failure'} onClick={handleRegister}>
+            <div id={isRegistered ? 'success' : 'failure'} >
               <i className={isRegistered ? registered : notRegistered}></i>
               <span>{isRegistered ? ' REGISTERED' : ' REGISTER'}</span>
+              <span id='registration-button'>
+                <button onClick={handleRegister}>{isRegistered? 'UNREGISTER' : 'REGISTER'}</button>
+              </span>
             </div>
           ) : (
             <div id='neutral'>
@@ -71,7 +74,7 @@ export default function Card(cardInfo) {
 }
 
 Card.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   imgUrl: PropTypes.string.isRequired,
