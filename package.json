@@ -3,13 +3,48 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.21.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.3.4",
+    "babel-jest": "^29.4.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router": "^6.8.2",
+    "react-router-dom": "^6.8.2",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!(axios)/)"
+  ],
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "clover",
+      "cobertura"
+    ],
+    "collectCoverageFrom": [
+      "**/**/*.{js,jsx}"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/src/index.jsx",
+      "<rootDir>/src/constants/",
+      "<rootDir>/src/components/index.js",
+      "<rootDir>/src/pages/index.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    }
   },
   "scripts": {
     "start": "react-scripts start",
@@ -34,5 +69,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^8.35.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "prettier": "^2.8.4"
   }
 }
