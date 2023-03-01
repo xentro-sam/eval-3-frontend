@@ -1,10 +1,11 @@
 import * as React from 'react';
-import {Header} from '../../components';
+import {Header, EventsContainer} from '../../components';
 
 export default function Home() {
   return (
     <div>
       <Header />
+      <EventsContainer />
     </div>
   );
 }
