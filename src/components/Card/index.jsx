@@ -34,7 +34,6 @@ export default function Card(cardInfo) {
     });
   };
 
-  console.log('cardInfo', cardInfo);
   return (
     <div id='event-card'>
       <div id='event-card-image'>

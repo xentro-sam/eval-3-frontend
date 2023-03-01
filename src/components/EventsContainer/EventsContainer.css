@@ -1,6 +1,51 @@
+#container {
+    padding-top: 2%;
+}
+
 #event-container {
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
     justify-content: space-between;
+}
+
+#container-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#filter {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#search {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#search > input {
+    font-size: 2rem;
+    font-weight: bold;
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: transparent;
+    margin-right: 15px;
+}
+
+#filter-options {
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2%;
+}
+
+#filter-option-1 {
+    margin-right: 25%
+}
+
+#filter-option-2 {
+    margin-left: 25%
 }

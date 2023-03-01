@@ -3,3 +3,7 @@ export const notBookmarked = 'fa-regular fa-bookmark';
 export const notRegistered = 'fa-regular fa-circle';
 export const registered = 'fa-solid fa-circle-check';
 export const cannotRegister = 'fa-solid fa-circle-xmark';
+export const filter = 'fa-solid fa-filter';
+export const chevronUp = 'fa-solid fa-chevron-up';
+export const search = 'fa-solid fa-magnifying-glass';
+export const registeredAlt = 'fa-solid fa-circle-dot';
