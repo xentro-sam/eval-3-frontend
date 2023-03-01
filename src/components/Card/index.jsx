@@ -4,10 +4,12 @@ import {getFormattedDateFromUtcDate} from '../../utils/common';
 import {bookmarked, notBookmarked, notRegistered, registered, cannotRegister} from '../../constants/fontAwesomeClasses';
 import {UPDATE_EVENT as updateEvent} from '../../constants/apiEndPoints';
 import makeRequest from '../../utils/makeRequest';
+import {ThemeContext} from '../../contexts/themeContext';
 
 export default function Card(cardInfo) {
   const [isBookmarked, setIsBookmarked] = React.useState(false);
   const [isRegistered, setIsRegistered] = React.useState(false);
+  const {themeId} = React.useContext(ThemeContext);
 
   React.useEffect(() => {
     setIsBookmarked(cardInfo.isBookmarked);
@@ -35,7 +37,7 @@ export default function Card(cardInfo) {
   };
 
   return (
-    <div id='event-card'>
+    <div id='event-card' style={{backgroundColor: themeId}}>
       <div id='event-card-image'>
         <img src={cardInfo.imgUrl} alt={cardInfo.name} />
       </div>

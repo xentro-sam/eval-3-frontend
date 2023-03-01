@@ -24,3 +24,15 @@
     border-radius: 10px;
     border: 1px solid white;
 }
+
+#toggle-button {
+    padding-top: 0.5vh;
+}
+
+#toggle-button > button {
+    margin: 2vh;
+    width: 10vw;
+    height: 5vh;
+    border-radius: 10px;
+    border: 1px solid white;
+}
