@@ -1,11 +1,14 @@
 import * as React from 'react';
 import './App.css';
 import Home from './pages/Home';
+import {ThemeContextProvider} from './contexts/themeContext';
 
 function App() {
   return (
     <div className="App">
-      <Home />
+      <ThemeContextProvider>
+        <Home />
+      </ThemeContextProvider>
     </div>
   );
 }

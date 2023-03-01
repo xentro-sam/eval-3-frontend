@@ -17,6 +17,7 @@
         "react"
     ],
     "rules": {
+        "react/prop-types": "off",
         "max-len": "off",
         "require-jsdoc": "off",
         "react/jsx-filename-extension": [1, {
