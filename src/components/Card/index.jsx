@@ -5,6 +5,7 @@ import {bookmarked, notBookmarked, notRegistered, registered, cannotRegister} fr
 import {UPDATE_EVENT as updateEvent} from '../../constants/apiEndPoints';
 import makeRequest from '../../utils/makeRequest';
 import {ThemeContext} from '../../contexts/themeContext';
+import PropTypes from 'prop-types';
 
 export default function Card(cardInfo) {
   const [isBookmarked, setIsBookmarked] = React.useState(false);
@@ -68,3 +69,15 @@ export default function Card(cardInfo) {
     </div>
   );
 }
+
+Card.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  imgUrl: PropTypes.string.isRequired,
+  venue: PropTypes.string.isRequired,
+  datetime: PropTypes.string.isRequired,
+  isBookmarked: PropTypes.bool.isRequired,
+  isRegistered: PropTypes.bool.isRequired,
+  areSeatsAvailable: PropTypes.bool.isRequired,
+};
