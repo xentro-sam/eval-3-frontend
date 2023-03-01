@@ -4,7 +4,7 @@ import {GET_ALL_EVENTS} from '../../constants/apiEndPoints';
 import makeRequest from '../../utils/makeRequest';
 import Card from '../Card';
 import {filter, chevronUp, search, notRegistered, registeredAlt} from '../../constants/fontAwesomeClasses';
-import getCards from '../../utils/getCards';
+import {getCardsByFilter, getCardsByName} from '../../utils/getCards';
 
 let ALLCARDS = [];
 
@@ -26,7 +26,7 @@ export default function EventsContainer() {
   }, []);
 
   const handleFilter = (filter) => {
-    getCards(ALLCARDS, setCards, filter);
+    getCardsByFilter(ALLCARDS, setCards, filter);
     setFilterOptions({
       all: false,
       bookmarked: false,
@@ -34,6 +34,10 @@ export default function EventsContainer() {
       seatsAvailable: false,
       [filter]: true,
     });
+  };
+
+  const handleSearch = (e) => {
+    getCardsByName(ALLCARDS, setCards, e.target.value);
   };
 
   return cards ? (
@@ -45,7 +49,7 @@ export default function EventsContainer() {
           <i className={chevronUp}></i>
         </div>
         <div id='search'>
-          <input type='text' placeholder='Search' />
+          <input type='text' placeholder='Search' onChange={handleSearch} />
           <i className={search}></i>
         </div>
       </div>

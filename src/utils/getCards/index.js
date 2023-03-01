@@ -1,4 +1,4 @@
-const getCards = (cards, setCards, myFilter) => {
+const getCardsByFilter = (cards, setCards, myFilter) => {
   const filteredCards = cards.filter((card) => {
     if (myFilter === 'bookmarked') {
       return card.isBookmarked;
@@ -13,4 +13,11 @@ const getCards = (cards, setCards, myFilter) => {
   setCards(filteredCards);
 };
 
-export default getCards;
+const getCardsByName = (cards, setCards, myName) => {
+  const filteredCards = cards.filter((card) => {
+    return card.name.toLowerCase().includes(myName.toLowerCase());
+  });
+  setCards(filteredCards);
+};
+
+export {getCardsByFilter, getCardsByName};
