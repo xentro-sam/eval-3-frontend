@@ -4,7 +4,7 @@
     background-color: black;
     color: white;
     border-radius: 3%;
-    width: 35%;
+    width: 40%;
     margin-top: 5%;
     margin-bottom: 5%;
     box-sizing: border-box;
@@ -15,6 +15,10 @@
     width: 100%;
     border-radius: 3%;
     height: 20vh;
+}
+
+#event-card-content {
+    padding: 2%;
 }
 
 #event-card-content-title {
@@ -41,4 +45,27 @@
 
 span {
     font-weight: bold;
+}
+
+#success {
+    color: green;
+}
+
+#failure {
+    color: red;
+}
+
+#neutral {
+    color: yellow;
+}
+
+#event-card-engagements {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+}
+
+#event-card-engagements-bookmark {
+    color: palevioletred;
 }

@@ -1,4 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap');
+
 .page-padding {
   padding-left : 20%;
   padding-right : 20%;
+}
+
+body {
+  font-family: 'Sofia Sans', sans-serif;
 }
