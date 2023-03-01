@@ -25,7 +25,7 @@
 }
 
 #search > input {
-    font-size: 2rem;
+    font-size: 2vw;
     font-weight: bold;
     border: 1px solid grey;
     border-radius: 10px;
@@ -34,7 +34,7 @@
 }
 
 #filter-options {
-    font-size: 2rem;
+    font-size: 2vw;
     font-weight: bold;
     display: flex;
     flex-wrap: wrap;
@@ -43,9 +43,10 @@
 }
 
 #filter-option-1 {
-    margin-right: 25%
+    width: 50%;
 }
 
 #filter-option-2 {
-    margin-left: 25%
+    text-align: end;
+    width: 50%;
 }

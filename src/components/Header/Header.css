@@ -5,10 +5,11 @@
     background-color: black;
     color: white;
     height: 10vh;
+    width: 100%;
 }
 
 #header-title {
-    font-size: 3em;
+    font-size: 3rem;
     font-weight: 100;
     margin: 0;
     padding: 0;

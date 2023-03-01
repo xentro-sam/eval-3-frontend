@@ -5,6 +5,7 @@
     color: white;
     border-radius: 3%;
     width: 40%;
+    min-width: 300px;
     margin-top: 5%;
     margin-bottom: 5%;
     box-sizing: border-box;
